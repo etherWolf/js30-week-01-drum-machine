@@ -5,14 +5,16 @@
   "private": true,
   "author": "etherWolf",
   "license": "MIT",
-  "homepage": "https://github.com/etherWolf/webpack-boilerplate",
+  "homepage": "https://github.com/etherWolf/js30-week-01-drum-machine",
   "scripts": {
-    "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js --content-base dist/",
-    "build": "webpack -p --progress --mode production --config webpack.config.build.js"
+    "dev":
+      "cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js --content-base dist/",
+    "build":
+      "webpack -p --progress --mode production --config webpack.config.build.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/etherWolf/webpack-boilerplate.git"
+    "url": "https://github.com/etherWolf/js30-week-01-drum-machine.git"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
