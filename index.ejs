@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Squada+One|VT323" rel="stylesheet">
+</head>
+
+<body>
+    <div class="machine machine--off" id="drum-machine">
+        <div class="head">
+            <div class="volume">
+                <div class="volume__knob">
+                    <input class="volume__pointer" type="range" min="0" max="10" data-width="100" data-height="100" data-angleOffset="220" data-angleRange="280">
+                </div>
+                <div class="volume__indicator">
+                    <div class="volume__indicator-notch volume__indicator-notch-10"></div>
+                    <div class="volume__indicator-notch volume__indicator-notch-9"></div>
+                    <div class="volume__indicator-notch volume__indicator-notch-8"></div>
+                    <div class="volume__indicator-notch volume__indicator-notch-7"></div>
+                    <div class="volume__indicator-notch volume__indicator-notch-6"></div>
+                    <div class="volume__indicator-notch volume__indicator-notch-5 volume__indicator-notch--lit"></div>
+                    <div class="volume__indicator-notch volume__indicator-notch-4 volume__indicator-notch--lit"></div>
+                    <div class="volume__indicator-notch volume__indicator-notch-3 volume__indicator-notch--lit"></div>
+                    <div class="volume__indicator-notch volume__indicator-notch-2 volume__indicator-notch--lit"></div>
+                    <div class="volume__indicator-notch volume__indicator-notch-1 volume__indicator-notch--lit"></div>
+                </div>
+            </div>
+            <div class="display" id="display">
+                <div class="display__bpm">
+                    0 BPM
+                </div>
+                <div class="display__tone">
+                    WELCOME
+                </div>
+                <div class="display__brand">
+                    <div class="display__brand-name">
+                        DRUM-X
+                    </div>
+                    <div class="display__brand-model">
+                        PXF 300
+                    </div>
+                </div>
+            </div>
+            <div class="power-button">
+                <div class="power-button__cut">
+                    <div class="power-button__surface">
+                        <svg class="power-button__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <title>power</title>
+                            <path d="M19.1 5.9c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4c3.1 3.1 3.1 8.2 0 11.3s-8.2 3.1-11.3 0c-3.1-3.1-3.1-8.2 0-11.3 0.4-0.4 0.4-1 0-1.4s-1-0.4-1.4 0c-4 3.9-4 10.3-0.1 14.2 2 1.9 4.5 2.9 7.1 2.9s5.1-1 7.1-2.9c3.9-3.9 3.9-10.3 0-14.2z"></path>
+                            <path d="M12 13c0.6 0 1-0.4 1-1v-10c0-0.6-0.4-1-1-1s-1 0.4-1 1v10c0 0.6 0.4 1 1 1z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-key="81" class="drum-pad" id="drum-pad--1">
+            <div class="drum-pad__key">
+                Q
+            </div>
+            <div class="drum-pad__text">
+                clap
+            </div>
+            <audio data-key="81" src="./statics/sounds/clap.wav"></audio>
+        </div>
+        <div data-key="87" class="drum-pad" id="drum-pad--2">
+            <div class="drum-pad__key">
+                W
+            </div>
+            <div class="drum-pad__text">
+                hithat
+            </div>
+            <audio data-key="87" src="./statics/sounds/hihat.wav"></audio>
+        </div>
+        <div data-key="69" class="drum-pad" id="drum-pad--3">
+            <div class="drum-pad__key">
+                E
+            </div>
+            <div class="drum-pad__text">
+                kick
+            </div>
+            <audio data-key="69" src="./statics/sounds/kick.wav"></audio>
+        </div>
+        <div data-key="65" class="drum-pad" id="drum-pad--4">
+            <div class="drum-pad__key">
+                A
+            </div>
+            <div class="drum-pad__text">
+                openhat
+            </div>
+            <audio data-key="65" src="./statics/sounds/openhat.wav"></audio>
+        </div>
+        <div data-key="83" class="drum-pad" id="drum-pad--5">
+            <div class="drum-pad__key">
+                S
+            </div>
+            <div class="drum-pad__text">
+                boom
+            </div>
+            <audio data-key="83" src="./statics/sounds/boom.wav"></audio>
+        </div>
+        <div data-key="68" class="drum-pad" id="drum-pad--6">
+            <div class="drum-pad__key">
+                D
+            </div>
+            <div class="drum-pad__text">
+                ride
+            </div>
+            <audio data-key="68" src="./statics/sounds/ride.wav"></audio>
+        </div>
+        <div data-key="90" class="drum-pad" id="drum-pad--7">
+            <div class="drum-pad__key">
+                Z
+            </div>
+            <div class="drum-pad__text">
+                snare
+            </div>
+            <audio data-key="90" src="./statics/sounds/snare.wav"></audio>
+        </div>
+        <div data-key="88" class="drum-pad" id="drum-pad--8">
+            <div class="drum-pad__key">
+                X
+            </div>
+            <div class="drum-pad__text">
+                tom
+            </div>
+            <audio data-key="88" src="./statics/sounds/tom.wav"></audio>
+        </div>
+        <div data-key="67" class="drum-pad" id="drum-pad--9">
+            <div class="drum-pad__key">
+                C
+            </div>
+            <div class="drum-pad__text">
+                tink
+            </div>
+            <audio data-key="67" src="./statics/sounds/tink.wav"></audio>
+        </div>
+    </div>
+</body>
+
+</html>
